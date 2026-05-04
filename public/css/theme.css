@@ -1,0 +1,60 @@
+:root {
+    /* Light Theme - Vintage Brown */
+    --primary-bg: linear-gradient(135deg, #f5efe6 0%, #e8dcc8 100%);
+    --card-bg: rgba(255,252,245,0.96);
+    --text-primary: #2c1810;
+    --text-secondary: #8b7355;
+    --accent-gold: #c4a747;
+    --accent-brown: #8b7355;
+    --border-color: rgba(196,167,71,0.2);
+    --sidebar-bg: linear-gradient(180deg, #2c1810 0%, #1a0f0a 100%);
+    --sidebar-text: #d4c5a9;
+    --stat-icon-bg: rgba(196,167,71,0.12);
+}
+
+[data-theme="dark"] {
+    --primary-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    --card-bg: rgba(30,30,46,0.95);
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0b0;
+    --accent-gold: #c4a747;
+    --accent-brown: #8b7355;
+    --border-color: rgba(196,167,71,0.15);
+    --sidebar-bg: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
+    --sidebar-text: #a0a0b0;
+    --stat-icon-bg: rgba(196,167,71,0.08);
+}
+
+body {
+    background: var(--primary-bg);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 100px;
+    width: 45px;
+    height: 45px;
+    background: var(--card-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 99;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+.theme-toggle i {
+    font-size: 20px;
+    color: var(--accent-gold);
+}
